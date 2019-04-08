@@ -5,11 +5,14 @@ total_stops = 0
 $tr = ""
 @lines = {N => "N",
     L => "L",
-    S => "S"
+    S => "6"
      
 }
 
  def trip1(line,first,final , start)
+    if line == 6 
+        line = S
+    end
     $tr = ""
 
  if line.index(first) > line.index(final)
@@ -30,6 +33,7 @@ $total_stops= line.index(final) -  line.index(first)
      end 
  end
 if start == 1 
+    
  return "You must travel through the following stops on the #{@lines[line]} line: #{$tr} , "
 else 
 
@@ -43,4 +47,4 @@ end
   p trip1( line2 , "Union Square",  stop2 , 2)
 p "#{$total_stops} stops in total." 
 end
-planTrip(N, "Times Square", S, "33rd")
+planTrip(N, "Times Square", 6, "33rd")
