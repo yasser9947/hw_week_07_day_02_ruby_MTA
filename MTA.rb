@@ -4,6 +4,8 @@ S = ["Grand Central", "33rd", "28th", "23rd", "Union Square",  "Astor Place"]
 total_stops = 0
 $tr = ""
  def trip1(line,first,final , start)
+    $tr = ""
+
  if line.index(first) > line.index(final)
    $total_stops= line.index(first) - line.index(final)  + $total_stops
        x =  line.index(first)
@@ -24,6 +26,7 @@ $total_stops= line.index(final) -  line.index(first)
 if start == 1 
  return "You must travel through the following stops on the N line: #{$tr} , "
 else 
+
 return "Your journey continues through the following stops:#{$tr} "
 end
 end
