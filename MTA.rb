@@ -48,4 +48,4 @@ end
 p "#{$total_stops} stops in total." 
 end
 planTrip(N, "Times Square", L, "1st")
-# planTrip(N, "Times Square", N, "8th")
+# planTrip(N, "Times Square", N, "8th")s
