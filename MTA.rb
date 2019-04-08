@@ -3,6 +3,12 @@ L = ["8th", "6th", "Union Square", "3rd",  "1st"]
 S = ["Grand Central", "33rd", "28th", "23rd", "Union Square",  "Astor Place"]
 total_stops = 0
 $tr = ""
+@lines = {N => "N",
+    L => "L",
+    S => "S"
+     
+}
+
  def trip1(line,first,final , start)
     $tr = ""
 
@@ -24,7 +30,7 @@ $total_stops= line.index(final) -  line.index(first)
      end 
  end
 if start == 1 
- return "You must travel through the following stops on the N line: #{$tr} , "
+ return "You must travel through the following stops on the #{@lines[line]} line: #{$tr} , "
 else 
 
 return "Your journey continues through the following stops:#{$tr} "
